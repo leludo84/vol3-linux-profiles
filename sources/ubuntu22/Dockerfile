@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 # Installer les repos
 #
 
-RUN apt update && apt install lsb-release ubuntu-dbgsym-keyring -y
+RUN apt update && apt install lsb-release ubuntu-dbgsym-keyring zutils -y
 RUN echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted universe multiverse \
 deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse \
 deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe multiverse" | \
