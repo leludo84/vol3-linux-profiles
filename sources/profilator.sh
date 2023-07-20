@@ -17,15 +17,17 @@ do
         echo $size | grep " KB" && continue || true
 
         # Paquet déjà traité
-        test -e profiles/$pkg\.json && continue
+        test -e profiles/$pkg\.json.xz && continue
 
         apt install $pkg -y
 
         ./dwarf2json linux --elf /usr/lib/debug/boot/* > /tmp/$pkg\.json
+	xz /tmp/$pkg\.json
 
         apt remove $pkg -y
         apt autoremove -y
         apt clean
 
-        mv /tmp/$pkg\.json profiles/$pkg\.json
+        mv /tmp/$pkg\.json.xz profiles/
 done
+

@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 # Installer les repos
 #
 
-RUN apt update && apt install lsb-release -y
+RUN apt update && apt install lsb-release zutils -y
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F2EDC64DC5AEE1F6B9C621F0C8CAB6595FDFF622
 RUN echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted universe multiverse \
 deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse \
