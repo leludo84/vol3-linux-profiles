@@ -7,7 +7,7 @@ VERSION=$(lsb_release -rs)
 
 apt update
 #apt -o apt::cmd::use-format=1 -o apt::cmd::format='${Package}' -qq search linux-image.*dbgsym | grep -v kvm | while read pkg
-aptitude -F "%p;%I" search linux-image-.*-dbgsym | grep -v kvm | while read line
+aptitude -F "%p;%I" search linux-image-.*-dbgsym | tr -d ' ' |  grep -v kvm | while read line
 do
         echo $line
 	pkg=$(echo $line | cut -d\; -f1)
