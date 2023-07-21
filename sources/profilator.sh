@@ -6,18 +6,21 @@ VERSION=$(lsb_release -rs)
 
 
 apt update
-apt -o apt::cmd::use-format=1 -o apt::cmd::format='${Package}' -qq search linux-image.*dbgsym | grep -v kvm | while read pkg
+#apt -o apt::cmd::use-format=1 -o apt::cmd::format='${Package}' -qq search linux-image.*dbgsym | grep -v kvm | while read pkg
+aptitude -F "%p;%I" search linux-image-.*-dbgsym | grep -v kvm | while read line
 do
-        echo $pkg
-
-        # Paquet ne contenant pas de noyau
-        size=$(apt show $pkg | grep "Installed-Size")
-        echo $size | grep " B" && continue  || true
-        echo $size | grep " kB" && continue || true
-        echo $size | grep " KB" && continue || true
+        echo $line
+	pkg=$(echo $line | cut -d\; -f1)
+	size=$(echo $line | cut -d\; -f2)
 
         # Paquet déjà traité
         test -e profiles/$pkg\.json.xz && continue
+        
+	# Paquet ne contenant pas de noyau
+        #size=$(apt show $pkg | grep "Installed-Size")
+        echo $size | grep " B" && continue  || true
+        echo $size | grep " kB" && continue || true
+        echo $size | grep " KB" && continue || true
 
         apt install $pkg -y
 
