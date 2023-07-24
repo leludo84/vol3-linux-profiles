@@ -1,0 +1,19 @@
+# CentOS-Linux-Debuginfo.repo
+#
+# All debug packages are merged into a single repo, split by basearch, and are
+# not signed.
+
+[debuginfo]
+name=CentOS Linux $releasever - Debuginfo
+baseurl=http://debuginfo.centos.org/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+[baseos]
+name=CentOS Linux $releasever - BaseOS
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=BaseOS&infra=$infra
+baseurl=https://vault.centos.org/8.5.2111/BaseOS/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
