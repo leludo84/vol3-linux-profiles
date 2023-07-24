@@ -1,6 +1,9 @@
 #!/bin/bash
+set -e -x
 
 cd sources
+docker build ./ -f centos7/Dockerfile -t profilator-centos7
+docker build ./ -f centos6/Dockerfile -t profilator-centos6
 docker build ./ -f almalinux8/Dockerfile -t profilator-almalinux8
 docker build ./ -f almalinux9/Dockerfile -t profilator-almalinux9
 docker build ./ -f ubuntu16/Dockerfile -t profilator-ubuntu16
