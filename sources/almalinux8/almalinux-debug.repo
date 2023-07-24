@@ -1,0 +1,49 @@
+[baseos-debuginfo8]
+name=AlmaLinux 8 current - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[baseos-debuginfo83]
+name=AlmaLinux 8.3 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.3/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[baseos-debuginfo84]
+name=AlmaLinux 8.4 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.4/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[baseos-debuginfo85]
+name=AlmaLinux 8.5 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.6/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[baseos-debuginfo86]
+name=AlmaLinux 8.6 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.6/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[baseos-debuginfo87]
+name=AlmaLinux 8.7 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.7/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+
+[baseos-debuginfo88]
+name=AlmaLinux 8.8 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.8/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+

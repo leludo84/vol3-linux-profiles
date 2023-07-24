@@ -1,8 +1,8 @@
-FROM almalinux:8
+FROM almalinux:9
 
-RUN yum install lsb yum-utils -y
+RUN yum install yum-utils -y
 #RUN yum-config-manager --enable baseos-debuginfo 
-ADD almalinux8/almalinux-debug.repo /etc/yum.repos.d/ 
+ADD almalinux9/almalinux-debug.repo /etc/yum.repos.d/ 
 
 COPY ../dwarf2json ../profilator-alma.sh /root/
 RUN chmod +x /root/* && mkdir /root/profiles

@@ -3,7 +3,7 @@
 
 while true
 do
-	for distrib in ubuntu16 ubuntu18 ubuntu20 ubuntu22
+	for distrib in almalinux8 ubuntu16 ubuntu18 ubuntu20 ubuntu22
 	do
 		docker run -it --rm -v ./profiles/$distrib:/root/profiles profilator-$distrib
 		git add ./profiles/$distrib

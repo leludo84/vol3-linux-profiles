@@ -1,27 +1,25 @@
 #!/bin/bash
 set -e -x
 
-# TESTING !!!!
-
-# TODO: old versions
+ARCH=$(uname -p)
 
 yum clean all
-repoquery search kernel-debug-debuginfo* --qf '%{NAME};%{evr}' | while read line
+repoquery search kernel-debuginfo --qf '%{NAME};%{evr}' | while read line
 do
 	pkg=$(echo $line | cut -d\; -f1)
 	version=$(echo $line | cut -d\; -f2)
 
 	
 
-	test -e ./profiles/kernel-$version\.json.xz && continue
+	test -e ./profiles/kernel-$version\.$ARCH\.json.xz && continue
 
 	yum install -y $pkg-$version
         
-	./dwarf2json linux --elf /usr/lib/debug/lib/modules/$version\.x86_64+debug/vmlinux > /tmp/kernel-$version\.json
-	xz /tmp/kernel-$version\.json
+	./dwarf2json linux --elf /usr/lib/debug/lib/modules/$version\.$ARCH/vmlinux > /tmp/kernel-$version\.$ARCH\.json
+	xz /tmp/kernel-$version\.$ARCH\.json
 
-	yum remove kernel-debuginfo-common kernel-debug-debuginfo -y
+	yum remove kernel-debuginfo-common kernel-debuginfo -y
 
-        mv /tmp/kernel-$version\.json.xz profiles/
+        mv /tmp/kernel-$version\.$ARCH\.json.xz profiles/
 done
 
