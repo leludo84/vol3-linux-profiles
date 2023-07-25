@@ -3,34 +3,47 @@ set -e -x
 
 OS=$(lsb_release -is)
 VERSION=$(lsb_release -rs)
+ARCH=$(uname -m)
 
+if [ "$OS" = "Ubuntu" ]
+then
+        filter="dbgsym"
+else
+        filter="dbg"
+fi
 
-apt update
-#apt -o apt::cmd::use-format=1 -o apt::cmd::format='${Package}' -qq search linux-image.*dbgsym | grep -v kvm | while read pkg
-aptitude -F "%p;%I" search linux-image-.*-dbgsym | tr -d ' ' |  grep -v kvm | while read line
+#linux-image-6.1.0-10-amd64-dbg/stable 6.1.38-1 amd64
+apt update -o Acquire::Check-Valid-Until=false
+
+# Get all versions
+apt list -a | grep linux-image-.*-$filter/ | grep -v kvm > version.txt
+
+# Get all packages
+aptitude -F "%p;%I;%V" search linux-image-.*-$filter | tr -d ' ' |  grep -v kvm | while read line
 do
         echo $line
-	pkg=$(echo $line | cut -d\; -f1)
-	size=$(echo $line | cut -d\; -f2)
+        pkg=$(echo $line | cut -d\; -f1)
+        size=$(echo $line | cut -d\; -f2)
 
-        # Paquet déjà traité
-        test -e profiles/$pkg\.json.xz && continue
-        
-	# Paquet ne contenant pas de noyau
-        #size=$(apt show $pkg | grep "Installed-Size")
-        echo $size | grep " B" && continue  || true
-        echo $size | grep " kB" && continue || true
-        echo $size | grep " KB" && continue || true
+        # Paquet ne contenant pas de noyau
+        echo $size | grep -E -e "[0-9]B" -e "kB" -e "KB" && continue || true
 
-        apt install $pkg -y
+        for version in $(grep $pkg/ version.txt | cut -f2 -d\  )
+        do
+                file=$pkg\_$version\_$ARCH\.json
+                file_xz=$file\.xz
 
-        ./dwarf2json linux --elf /usr/lib/debug/boot/* > /tmp/$pkg\.json
-	xz /tmp/$pkg\.json
+                # Paquet déj�|  traité
+                test -e profiles/$file_xz && continue
 
-        apt remove $pkg -y
-        apt autoremove -y
-        apt clean
+                apt install $pkg=$version -y
+                ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-* > /tmp/$file
+                xz /tmp/$file
 
-        mv /tmp/$pkg\.json.xz profiles/
+                apt remove $pkg -y
+                apt autoremove -y
+                apt clean
+
+                mv /tmp/$file_xz profiles/
+        done
 done
-
