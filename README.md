@@ -19,13 +19,14 @@ This project contains all kernel versions including security updates.
 | Ubuntu 18    | all    | 815               |
 | Ubuntu 20    |        | 209               |
 | Ubuntu 22    |        | 260               |
+| Debian 11    | all    | *Coming soon ...* |
 | Debian 12    | all    | *Coming soon ...* |
 
-> **WARNING**: Ubuntu 20 and 22 do not provide old package in their repository (the last 15 or 20 kernels). We haven't profile older than this project.
+> **WARNING**: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project.
 
 ## Build
 
-All processor are docker container. Build then with this script:
+All processors are docker container. Build then with this script:
 
 ```bash
 ./make.sh
