@@ -22,7 +22,7 @@ This project contains all kernel versions including security updates.
 | Debian 11    | all    | *Coming soon ...* |
 | Debian 12    | all    | *Coming soon ...* |
 
-> **WARNING**: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project.
+:warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
 ## Build
 
