@@ -11,8 +11,8 @@ This project contains all kernel versions including security updates.
 | Distribution | Period | Count             |
 | ------------ | ------ | ----------------- |
 | Centos 6     | all    | 230               |
-| Centos 7     | all    | *Downloading ...* |
-| Centos 8     | all    | *Downloading ...* |
+| Centos 7     | all    | 115 |
+| Centos 8     | all    | 29 |
 | Almalinux 8  | all    | 23                |
 | Almalinux 9  | all    | 9                 |
 | Ubuntu 16    | all    | 1123              |
@@ -22,7 +22,7 @@ This project contains all kernel versions including security updates.
 | Debian 7     | until 2018-06-01 | *Coming soon ...* |
 | Debian 8     | until 2021-03-26 | *Coming soon ...* |
 | Debian 9     | until 2022-06-22 | *Coming soon ...* |
-| Debian 10    | all    | *Coming soon ...* |
+| Debian 10    | all    | *Testing ...* |
 | Debian 11    | all    | *Testing ...* |
 | Debian 12    | all    | *Testing ...* |
 
