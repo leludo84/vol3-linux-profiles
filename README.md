@@ -22,9 +22,9 @@ This project contains all kernel versions including security updates.
 | Debian 7     | until 2018-06-01 | *Coming soon ...* |
 | Debian 8     | until 2021-03-26 | *Coming soon ...* |
 | Debian 9     | until 2022-06-22 | *Coming soon ...* |
-| Debian 10    | all    | *Testing ...* |
-| Debian 11    | from 2022-03-07 to now    | *Testing ...* |
-| Debian 12    | all    | *Testing ...* |
+| Debian 10    | *Testing ...* | 39 |
+| Debian 11    | from 2022-03-07 to now    | 33 |
+| Debian 12    | *Testing ...* | 12 |
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
