@@ -17,8 +17,8 @@ This project contains all kernel versions including security updates.
 | Almalinux 9  | all    | 9                 |
 | Ubuntu 16    | all    | 1123              |
 | Ubuntu 18    | all    | 815               |
-| Ubuntu 20    | ?      | 209               |
-| Ubuntu 22    | April to now | 260               |
+| Ubuntu 20    | ?      | 233               |
+| Ubuntu 22    | April to now | 165               |
 | Debian 7     | until 2018-06-01 | *Coming soon ...* |
 | Debian 8     | until 2021-03-26 | *Coming soon ...* |
 | Debian 9     | until 2022-06-22 | *Coming soon ...* |
