@@ -43,7 +43,7 @@ grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gc
 
 ```
 
-> Note: the banner is recovered via the plugin volatility3 **banners.Banners**.
+> Note: the banner is recovered via the volatility3 plugin **banners.Banners**.
 
 ## Install profiles
 
