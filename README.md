@@ -1,38 +1,55 @@
 # Volatility 3 Linux profiles
+
 ## Project
 
-The goal of this project is to build and provide all possible Volatility 3 profiles for the main Linux distributions in x86_64 version.
+The goal of this project is to build and provide all possible Volatility3 profiles for the main Linux distributions in **x86_64** version only.
 
 This project contains all kernel versions including security updates.
 
 
 ## Profiles
 
-| Distribution | Period | Count             |
-| ------------ | ------ | ----------------- |
-| Centos 6     | all    | 230               |
-| Centos 7     | all    | 115 |
-| Centos 8     | all    | 29 |
-| Almalinux 8  | all    | 23                |
-| Almalinux 9  | all    | 9                 |
-| Ubuntu 16    | all    | 778               |
-| Ubuntu 18    | all    | 815               |
+| Distribution | Period                 | Count             |
+| ------------ | ---------------------- | ----------------- |
+| Centos 6     | all                    | 230               |
+| Centos 7     | all                    | 115               |
+| Centos 8     | all                    | 29                |
+| Almalinux 8  | all                    | 23                |
+| Almalinux 9  | all                    | 9                 |
+| Ubuntu 16    | all                    | 778               |
+| Ubuntu 18    | all                    | 815               |
 | Ubuntu 20    | from 2021-10-12 to now | 233               |
-| Ubuntu 22    | from April to now | 165               |
-| Debian 7     | until 2018-06-01 | *Coming soon ...* |
-| Debian 8     | until 2021-03-26 | *Coming soon ...* |
-| Debian 9     | until 2022-06-22 | *Coming soon ...* |
-| Debian 10    | from 2022-03-07 to now | 39 |
-| Debian 11    | from 2022-03-07 to now | 33 |
-| Debian 12    | from 2023-05-08 to now | 12 |
+| Ubuntu 22    | from April to now      | 165               |
+| Debian 7     | until 2018-06-01       | *Coming soon ...* |
+| Debian 8     | until 2021-03-26       | *Coming soon ...* |
+| Debian 9     | until 2022-06-22       | *Coming soon ...* |
+| Debian 10    | from 2022-03-07 to now | 39                |
+| Debian 11    | from 2022-03-07 to now | 33                |
+| Debian 12    | from 2023-05-08 to now | 12                |
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
+
+## Where is my profile
+
+The are two methods to find your profile:
+
+1.  Use the kernel package name with version and add *-dbg*, *-dbgsym* or *-debuginfo*, depending on the linux distribution;
+2.  Use Linux banners index (*banners.json*), for example:
+
+```bash
+grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #7~22.04.1-Ubuntu SMP Fri Jul  7 13:49:28 UTC 2023 (Ubuntu 6.2.0-1007.7~22.04.1-aws 6.2.13)" banners.json | jq .symbols_file
+
+"linux-image-unsigned-6.2.0-1007-aws-dbgsym_6.2.0-1007.7~22.04.1_x86_64.json.xz"
+
+```
+
+> Note: the banner is recovered via the plugin volatility3 **banners.Banners**.
 
 ## Install profiles
 
 Each of these profiles is packaged as a compressed `.json.xz` file. You can enable them individually in your Volatility installation by copying it in `volatility3/symbols/linux/`.
 
-## Build
+## Build the profilator
 
 All processors are docker container. Build then with this script:
 
@@ -47,6 +64,7 @@ All processors are docker container. Build then with this script:
 > Creating a profile for Volatility 3 does not require installing a Linux identical to the sampled machine.
 
 ### dwarf2json installation
+
 On the analysis machine, download and compile **dwarf2json** from https://github.com/volatilityfoundation/dwarf2json
 
 ```bash
@@ -78,6 +96,7 @@ According to the distributions, the name of the corresponding package is the fol
 > The package can be either installed or unpacked on any OS with 7zip for example.
 
 More informations:
+
 - https://access.redhat.com/solutions/9907
 - https://www.ibm.com/docs/en/linux-on-systems?topic=linuxonibm/liacf/oprofkernelsymrhel.html
 - https://wiki.ubuntu.com/Debug%20Symbol%20Packages
@@ -85,17 +104,18 @@ More informations:
 > Debian: if the package is no longer present on the repository, it is possible to go back in time with http://snapshot.debian.org/ . Find and download the package from the home page search engine.
 
 ### Build profile
+
 ```bash
 ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-4.4.0-137-generic > linux-4.4.0.json
 cp linux-4.4.0.json <volatility3>/symbols/
 
 ```
+
 > In some cases, adding the option *--system-map System-map-$(uname -r)* may be necessary when creating the profile.
 
 ### Test
+
 ```bash
 python3 vol.py -vvvv -f ram.img linux.pslist.PsList
 ```
-
-
 
