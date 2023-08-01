@@ -12,6 +12,9 @@ else
         filter="dbg"
 fi
 
+python=python
+test -e /usr/bin/python3 && python=python3
+
 #linux-image-6.1.0-10-amd64-dbg/stable 6.1.38-1 amd64
 apt update -o Acquire::Check-Valid-Until=false
 
@@ -38,12 +41,15 @@ do
 
                 apt install $pkg=$version -y
                 ./dwarf2json linux --elf /usr/lib/debug/boot/vmlinux-* > /tmp/$file
-                xz /tmp/$file
+                $python ./banner.py /tmp/$file > /tmp/banner.json
+		xz /tmp/$file
 
                 apt remove $pkg -y
                 apt autoremove -y
                 apt clean
 
                 mv /tmp/$file_xz profiles/
+		cat /tmp/banner.json >> profiles/banners.json
         done
 done
+

@@ -9,7 +9,7 @@ RUN echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted univers
     && echo "deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse"	>> /etc/apt/sources.list.d/ddebs.list \
     && echo "deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe multiverse"	>> /etc/apt/sources.list.d/ddebs.list
 
-COPY ../dwarf2json ../profilator.sh /root/
+COPY ../dwarf2json ../profilator.sh ../banner.py /root/
 RUN chmod +x /root/* && mkdir /root/profiles
 
 CMD cd /root && ./profilator.sh

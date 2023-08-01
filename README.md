@@ -17,14 +17,14 @@ This project contains all kernel versions including security updates.
 | Almalinux 9  | all    | 9                 |
 | Ubuntu 16    | all    | 778               |
 | Ubuntu 18    | all    | 815               |
-| Ubuntu 20    | ?      | 233               |
+| Ubuntu 20    | from 2021-10-12 to now | 233               |
 | Ubuntu 22    | from April to now | 165               |
 | Debian 7     | until 2018-06-01 | *Coming soon ...* |
 | Debian 8     | until 2021-03-26 | *Coming soon ...* |
 | Debian 9     | until 2022-06-22 | *Coming soon ...* |
-| Debian 10    | *Testing ...* | 39 |
-| Debian 11    | from 2022-03-07 to now    | 33 |
-| Debian 12    | *Testing ...* | 12 |
+| Debian 10    | from 2022-03-07 to now | 39 |
+| Debian 11    | from 2022-03-07 to now | 33 |
+| Debian 12    | from 2023-05-08 to now | 12 |
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 

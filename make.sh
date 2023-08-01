@@ -2,9 +2,7 @@
 set -e -x
 
 cd sources
-docker build ./ -f debian7/Dockerfile -t profilator-debian7
-docker build ./ -f debian8/Dockerfile -t profilator-debian8
-docker build ./ -f debian9/Dockerfile -t profilator-debian9
+docker build ./ -f debian-snapshot/Dockerfile -t profilator-debian-snapshot
 docker build ./ -f debian10/Dockerfile -t profilator-debian10
 docker build ./ -f debian11/Dockerfile -t profilator-debian11
 docker build ./ -f debian12/Dockerfile -t profilator-debian12

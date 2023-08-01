@@ -10,7 +10,7 @@ RUN yum-config-manager --enable base-debuginfo
 # && yum-config-manager --disable updates \
 # && yum-config-manager --disable extras
 
-COPY ../dwarf2json ../profilator-alma.sh /root/
+COPY ../dwarf2json ../profilator-alma.sh ../banner.py /root/
 RUN chmod +x /root/* && mkdir /root/profiles
 
 CMD cd /root && ./profilator-alma.sh
