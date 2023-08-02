@@ -17,7 +17,7 @@ This project contains all kernel versions including security updates.
 | Almalinux 8  | all                    | 23                |
 | Almalinux 9  | all                    | 9                 |
 | Ubuntu 16    | all                    | 778               |
-| Ubuntu 18    | all                    | 815               |
+| Ubuntu 18    | all                    | 812               |
 | Ubuntu 20    | from 2021-10-12 to now | 233               |
 | Ubuntu 22    | from April to now      | 165               |
 | Debian 7     | until 2018-06-01       | *Coming soon ...* |
@@ -29,7 +29,7 @@ This project contains all kernel versions including security updates.
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
-## Where is my profile
+## Where is my profile ?
 
 The are two methods to find your profile:
 
@@ -49,7 +49,9 @@ grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gc
 
 Each of these profiles is packaged as a compressed `.json.xz` file. You can enable them individually in your Volatility installation by copying it in `volatility3/symbols/linux/`.
 
-## Build the profilator
+## The profilator
+
+### Build the profilator
 
 All processors are docker container. Build then with this script:
 
@@ -57,7 +59,7 @@ All processors are docker container. Build then with this script:
 ./make.sh
 ```
 
-## Run
+### Run
 
 ## How manually build a Linux profile
 
