@@ -11,7 +11,7 @@ This project contains all kernel versions including security updates.
 
 | Distribution | Period                 | Path                                    | Count             |
 | ------------ | ---------------------- | --------------------------------------- | ----------------- |
-| Centos 6     | all                    | [profiles/centos6]()                    | 230               |
+| Centos 6     | all                    | [profiles/centos6/](profiles/centos6/)                    | 230               |
 | Centos 7     | all                    | [profiles/centos7/]()                   | 115               |
 | Centos 8     | all                    | [profiles/centos8/]()                   | 29                |
 | Almalinux 8  | all                    | [profiles/almalinux8/]()                | 23                |
