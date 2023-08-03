@@ -9,23 +9,24 @@ This project contains all kernel versions including security updates.
 
 ## Profiles
 
-| Distribution | Period                 | Count             |
-| ------------ | ---------------------- | ----------------- |
-| Centos 6     | all                    | 230               |
-| Centos 7     | all                    | 115               |
-| Centos 8     | all                    | 29                |
-| Almalinux 8  | all                    | 23                |
-| Almalinux 9  | all                    | 9                 |
-| Ubuntu 16    | all                    | 778               |
-| Ubuntu 18    | all                    | 812               |
-| Ubuntu 20    | from 2021-10-12 to now | 233               |
-| Ubuntu 22    | from April to now      | 165               |
-| Debian 7     | until 2018-06-01       | *Coming soon ...* |
-| Debian 8     | until 2021-03-26       | *Coming soon ...* |
-| Debian 9     | until 2022-06-22       | *Coming soon ...* |
-| Debian 10    | from 2022-03-07 to now | 39                |
-| Debian 11    | from 2022-03-07 to now | 33                |
-| Debian 12    | from 2023-05-08 to now | 12                |
+| Distribution | Period                 | Path                                    | Count             |
+| ------------ | ---------------------- | --------------------------------------- | ----------------- |
+| Centos 6     | all                    | [profiles/centos6]()                    | 230               |
+| Centos 7     | all                    | [profiles/centos7/]()                   | 115               |
+| Centos 8     | all                    | [profiles/centos8/]()                   | 29                |
+| Almalinux 8  | all                    | [profiles/almalinux8/]()                | 23                |
+| Almalinux 9  | all                    | [profiles/almalinux9/]()                | 9                 |
+| Ubuntu 16    | all                    | [profiles/ubuntu16/]()                  | 778               |
+| Ubuntu 18    | all                    | [profiles/ubuntu18/]()                  | 812               |
+| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/]()                  | 233               |
+| Ubuntu 22    | from April to now      | [profiles/ubuntu22/]()                  | 165               |
+| Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/]() | 290               |
+| Debian 7     | all                    |                                         | *Downloading ...* |
+| Debian 8     | all                    |                                         | *Downloading ...* |
+| Debian 9     | until 2022-06-22       |                                         | *Coming soon ...* |
+| Debian 10    | from 2022-03-07 to now | [profiles/debian10/]()                  | 39                |
+| Debian 11    | from 2022-03-07 to now | [profiles/debian11/]()                  | 33                |
+| Debian 12    | from 2023-05-08 to now | [profiles/debian12/]()                  | 12                |
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
@@ -120,4 +121,3 @@ cp linux-4.4.0.json <volatility3>/symbols/
 ```bash
 python3 vol.py -vvvv -f ram.img linux.pslist.PsList
 ```
-
