@@ -11,7 +11,7 @@ find $1 -type f -name "*.json.xz" | while read file
 do
 	#banner_file=${file%\.json\.xz}.banner.txt
 
-	echo "Processing $file to $banner_file ..."
+	echo "Processing $file to $banners_file\.json ..."
 	banner=$(xz -d < $file | jq -r .symbols.linux_banner.constant_data | base64 -d | head -n 1 | jq --raw-input . )
 
 	echo '{"symbols_file": "'$file'", "banner": '$banner'}' >> $banners_file\.json

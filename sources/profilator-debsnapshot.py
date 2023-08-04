@@ -32,7 +32,7 @@ def get_pkg(pkg_source, version):
 
 # Get all linux source versions
 
-for source in [ "linux-2.6", "linux" ]:
+for source in [ "linux-2.6", "linux-2.6.16", "linux-2.6.24", "linux" ]:
     response = requests.get("https://snapshot.debian.org/mr/package/"+source+"/")
     response.json()
     source_versions=response.json()["result"]
