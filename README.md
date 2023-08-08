@@ -12,19 +12,19 @@ This project contains all kernel versions including security updates.
 | Distribution | Period                 | Path                                    | Count             |
 | ------------ | ---------------------- | --------------------------------------- | ----------------- |
 | Centos 6     | all                    | [profiles/centos6/](profiles/centos6/)                    | 230               |
-| Centos 7     | all                    | [profiles/centos7/](profiles/centos7/)                   | 115               |
+| Centos 7     | all                    | [profiles/centos7/](profiles/centos7/)                   | 116              |
 | Centos 8     | all                    | [profiles/centos8/](profiles/centos8/)                   | 29                |
-| Almalinux 8  | all                    | [profiles/almalinux8/](profiles/almalinux8/)                | 23                |
-| Almalinux 9  | all                    | [profiles/almalinux9/](profiles/almalinux9/)                | 9                 |
+| Almalinux 8  | all                    | [profiles/almalinux8/](profiles/almalinux8/)                | 24                |
+| Almalinux 9  | all                    | [profiles/almalinux9/](profiles/almalinux9/)                | 8                |
 | Ubuntu 16    | all                    | [profiles/ubuntu16/](profiles/ubuntu16/)                  | 778               |
 | Ubuntu 18    | all                    | [profiles/ubuntu18/](profiles/ubuntu18/)                  | 812               |
-| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 233               |
-| Ubuntu 22    | from April to now      | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 165               |
-| Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290               |
-| Debian 7     | all                    |                                         | *Downloading ...* |
-| Debian 8     | all                    |                                         | *Downloading ...* |
-| Debian 9     | until 2022-06-22       |                                         | *Coming soon ...* |
-| Debian 10    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 39                |
+| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 234               |
+| Ubuntu 22    | from April to now      | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 169               |
+| Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290 |
+| Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 226 |
+| Debian 8     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 90 |
+| Debian 9     | all                    |                                         | *Downloading ...* |
+| Debian 10    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 42                |
 | Debian 11    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                  | 33                |
 | Debian 12    | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 12                |
 
