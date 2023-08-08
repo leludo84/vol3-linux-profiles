@@ -21,7 +21,7 @@ This project contains all kernel versions including security updates.
 | Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 234               |
 | Ubuntu 22    | from April to now      | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 169               |
 | Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290 |
-| Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 226 |
+| Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 228 |
 | Debian 8     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 90 |
 | Debian 9     | all                    |                                         | *Downloading ...* |
 | Debian 10    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 42                |
