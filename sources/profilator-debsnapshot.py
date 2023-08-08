@@ -3,7 +3,8 @@
 import requests
 import re
 import os
-from packaging import version
+import apt_pkg
+apt_pkg.init_system()
 
 def get_pkg(pkg_source, version):
     # get all package build from this linux source version 
@@ -41,15 +42,17 @@ for source in [ "linux-2.6", "linux-2.6.16", "linux-2.6.24", "linux" ]:
         print("*Get ", source, d_source_version["version"])
         if re.match(".*exp1$", d_source_version["version"]) is not None:
             continue
+        if re.match(".*exp2$", d_source_version["version"]) is not None:
+            continue
         if re.match(".*experimental$", d_source_version["version"]) is not None:
             continue
         if re.match(".*experimental.*$", d_source_version["version"]) is not None:
             continue
         if os.environ["START_VERSION"] != "all":
-            if d_source_version["version"] < os.environ["START_VERSION"]:
+            if apt_pkg.version_compare(d_source_version["version"], os.environ["START_VERSION"]) < 0 :
                 continue
         if os.environ["END_VERSION"] != "all":
-            if d_source_version["version"] > os.environ["END_VERSION"]:
+            if apt_pkg.version_compare(d_source_version["version"], os.environ["END_VERSION"]) > 0 :
                 continue
         get_pkg(source, d_source_version["version"])
 

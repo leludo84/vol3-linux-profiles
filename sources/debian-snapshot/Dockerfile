@@ -3,7 +3,7 @@ FROM debian:12
 # Installer les repos
 #
 
-RUN apt update && apt install zutils binutils python3 python3-requests python3-packaging wget vim -y
+RUN apt update && apt install zutils binutils python3 python3-requests python3-apt wget vim -y
 
 COPY ../dwarf2json ../profilator-debsnapshot.sh ../profilator-debsnapshot.py /root/
 RUN chmod +x /root/* && mkdir /root/profiles
