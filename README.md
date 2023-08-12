@@ -23,7 +23,7 @@ This project contains all kernel versions including security updates.
 | Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290 |
 | Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 228 |
 | Debian 8     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 90 |
-| Debian 9     | all                    |                                         | *Downloading ...* |
+| Debian 9     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-4/) | *Downloading ...* |
 | Debian 10    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 42                |
 | Debian 11    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                  | 33                |
 | Debian 12    | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 12                |
