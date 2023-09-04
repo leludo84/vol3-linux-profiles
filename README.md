@@ -14,19 +14,22 @@ This project contains all kernel versions including security updates.
 | Centos 6     | all                    | [profiles/centos6/](profiles/centos6/)                    | 230               |
 | Centos 7     | all                    | [profiles/centos7/](profiles/centos7/)                   | 116              |
 | Centos 8     | all                    | [profiles/centos8/](profiles/centos8/)                   | 29                |
-| Almalinux 8  | all                    | [profiles/almalinux8/](profiles/almalinux8/)                | 24                |
-| Almalinux 9  | all                    | [profiles/almalinux9/](profiles/almalinux9/)                | 8                |
+| Almalinux 8  | all                    | [profiles/almalinux8/](profiles/almalinux8/)                | 25              |
+| Almalinux 9  | all                    | [profiles/almalinux9/](profiles/almalinux9/)                | 9               |
 | Ubuntu 16    | all                    | [profiles/ubuntu16/](profiles/ubuntu16/)                  | 778               |
 | Ubuntu 18    | all                    | [profiles/ubuntu18/](profiles/ubuntu18/)                  | 812               |
-| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 234               |
-| Ubuntu 22    | from April to now      | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 169               |
+| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 246               |
+| Ubuntu 22    | from April to now      | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 178               |
 | Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290 |
 | Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 228 |
 | Debian 8     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 90 |
-| Debian 9     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | *Downloading ...* |
-| Debian 10    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 42                |
-| Debian 11    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                  | 33                |
-| Debian 12    | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 12                |
+| Debian 9     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | 170 |
+| Debian 10     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | *Downloading ...* |
+| Debian 11     | all                    | [profiles/debian-snapshot/linux-5/](profiles/debian-snapshot/linux-5/) | *Downloading ...* |
+| Debian 12     | all                    | [profiles/debian-snapshot/linux-6/](profiles/debian-snapshot/linux-6/) | *Downloading ...* |
+| Debian 10 (current)    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 48                |
+| Debian 11 (currrent)    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                  | 39                |
+| Debian 12 (current) | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 12                |
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
