@@ -23,13 +23,13 @@ This project contains all kernel versions including security updates.
 | Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290 |
 | Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 228 |
 | Debian 8     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 90 |
-| Debian 9     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | 170 |
-| Debian 10     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | *Downloading ...* |
-| Debian 11     | all                    | [profiles/debian-snapshot/linux-5/](profiles/debian-snapshot/linux-5/) | *Downloading ...* |
-| Debian 12     | all                    | [profiles/debian-snapshot/linux-6/](profiles/debian-snapshot/linux-6/) | *Downloading ...* |
+| Debian 9     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | 202 |
+| Debian 10     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | 207 |
+| Debian 11     | all                    | [profiles/debian-snapshot/linux-5/](profiles/debian-snapshot/linux-5/) | 192 |
+| Debian 12     | all                    | [profiles/debian-snapshot/linux-6/](profiles/debian-snapshot/linux-6/) | 63 |
 | Debian 10 (current)    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 48                |
 | Debian 11 (currrent)    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                  | 39                |
-| Debian 12 (current) | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 12                |
+| Debian 12 (current) | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 15                |
 
 :warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
