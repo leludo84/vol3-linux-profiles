@@ -47,3 +47,10 @@ enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
 
+[baseos-debuginfo89]
+name=AlmaLinux 8.9 - BaseOS debuginfo
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/8.9/baseos-debuginfo
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+

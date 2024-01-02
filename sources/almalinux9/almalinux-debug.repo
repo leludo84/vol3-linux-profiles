@@ -34,3 +34,12 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
 
+[baseos-debuginfo93]
+name=AlmaLinux 9.3 - BaseOS - Debug
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/9.3/baseos-debug
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
