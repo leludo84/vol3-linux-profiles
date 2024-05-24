@@ -3,19 +3,39 @@
 import requests
 import re
 import os
+import time
 import apt_pkg
 apt_pkg.init_system()
+
+def getData(url, max_retry=5, status_retry_list=[503, 504]):
+    time.sleep(1)
+    for attempts in range(max_retry):
+        delay = (attempts+1)*10
+        if attempts != 0:
+            print("Retrying ....")
+        try:
+            response = requests.get(url)
+            if response.status_code in status_retry_list:
+                # retry
+                raise Exception("Error code "+str(response.status_code))
+            return response.json()
+        except Exception as e:
+            print("*******************************************")
+            print("ERROR")
+            print(e)
+            print("*******************************************")
+            time.sleep(delay)
+
+    raise Exception("Impossible de récupérer les données: " + url)
 
 def get_pkg(pkg_source, version):
     # get all package build from this linux source version 
     print("Looking for pkgs versions of ", pkg_source, version)
-    response = requests.get("https://snapshot.debian.org/mr/package/"+pkg_source+"/"+version+"/allfiles?fileinfo=1")
     try:
-        pkgs = response.json()["fileinfo"]
+        pkgs = getData("https://snapshot.debian.org/mr/package/"+pkg_source+"/"+version+"/allfiles?fileinfo=1")["fileinfo"]
     except:
         print("*******************************************")
         print("ERROR")
-        print(response)
         print("*******************************************")
         return
 
@@ -29,14 +49,12 @@ def get_pkg(pkg_source, version):
         
         # Do
         print("Processing ", pkg)
-        os.system("./profilator-debsnapshot.sh "+pkg["name"]+" https://snapshot.debian.org/archive/"+pkg["archive_name"]+"/"+pkg["first_seen"]+pkg["path"]+"/"+pkg["name"])
+        os.system("./profilator-debsnapshot.sh "+pkg["name"]+" "+version+" https://snapshot.debian.org/archive/"+pkg["archive_name"]+"/"+pkg["first_seen"]+pkg["path"]+"/"+pkg["name"])
 
 # Get all linux source versions
 
 for source in [ "linux-2.6", "linux-2.6.16", "linux-2.6.24", "linux", "linux-4.9", "linux-4.19", "linux-5.10" ]:
-    response = requests.get("https://snapshot.debian.org/mr/package/"+source+"/")
-    response.json()
-    source_versions=response.json()["result"]
+    source_versions = getData("https://snapshot.debian.org/mr/package/"+source+"/")["result"]
 
     for d_source_version in source_versions:
         print("*Get ", source, d_source_version["version"])
