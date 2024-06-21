@@ -11,27 +11,22 @@ This project contains all kernel versions including security updates.
 
 | Distribution | Period                 | Path                                    | Count             |
 | ------------ | ---------------------- | --------------------------------------- | ----------------- |
+| Almalinux 8  | all                    | [profiles/almalinux8/](profiles/almalinux8/)                | 35              |
+| Almalinux 9  | all                    | [profiles/almalinux9/](profiles/almalinux9/)                | 19               |
 | Centos 6     | all                    | [profiles/centos6/](profiles/centos6/)                    | 230               |
 | Centos 7     | all                    | [profiles/centos7/](profiles/centos7/)                   | 116              |
 | Centos 8     | all                    | [profiles/centos8/](profiles/centos8/)                   | 29                |
-| Almalinux 8  | all                    | [profiles/almalinux8/](profiles/almalinux8/)                | 29              |
-| Almalinux 9  | all                    | [profiles/almalinux9/](profiles/almalinux9/)                | 12               |
 | Ubuntu 16    | all                    | [profiles/ubuntu16/](profiles/ubuntu16/)                  | 778               |
 | Ubuntu 18    | all                    | [profiles/ubuntu18/](profiles/ubuntu18/)                  | 812               |
-| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 393               |
-| Ubuntu 22    | from April 2023 to now | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 364               |
-| Debian 6     | all                    | [profiles/debian-snapshot/linux-2.6/](profiles/debian-snapshot/linux-2.6/) | 290 |
-| Debian 7     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 228 |
-| Debian 8     | all                    | [profiles/debian-snapshot/linux-3/](profiles/debian-snapshot/linux-3/) | 83 |
-| Debian 9     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | 202 |
-| Debian 10     | all                    | [profiles/debian-snapshot/linux-4/](profiles/debian-snapshot/linux-4/) | 207 |
-| Debian 11     | all                    | [profiles/debian-snapshot/linux-5/](profiles/debian-snapshot/linux-5/) | 198 |
-| Debian 12     | all                    | [profiles/debian-snapshot/linux-6/](profiles/debian-snapshot/linux-6/) | 84 |
-| Debian 10 (current)    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 51                |
-| Debian 11 (currrent)    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                  | 42                |
-| Debian 12 (current) | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                  | 30                |
+| Ubuntu 20    | from 2021-10-12 to now | [profiles/ubuntu20/](profiles/ubuntu20/)                  | 566               |
+| Ubuntu 22    | from April 2023 to now | [profiles/ubuntu22/](profiles/ubuntu22/)                  | 580               |
+| Ubuntu 24    | from June 2024 to now  | [profiles/ubuntu24/](profiles/ubuntu24/)                  | 30                |
+| Debian 6 to 12 (debian snapshot) | all                    | [profiles/debian-snapshot/](profiles/debian-snapshot/) | 1995 |
+| Debian 10 (last)    | from 2022-03-07 to now | [profiles/debian10/](profiles/debian10/)                  | 63             |
+| Debian 11 (last)    | from 2022-03-07 to now | [profiles/debian11/](profiles/debian11/)                 | 51             |
+| Debian 12 (last) | from 2023-05-08 to now | [profiles/debian12/](profiles/debian12/)                     | 36             |
 
-:warning: Ubuntu 20 and 22 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
+:warning: Ubuntu 20, 22 and 24 do not provide old packages in their repository (the last 15 or 20 kernels). We haven't profile older than this project. Use https://github.com/p0dalirius/volatility3-symbols for old symbols.
 
 ## Where is my profile ?
 

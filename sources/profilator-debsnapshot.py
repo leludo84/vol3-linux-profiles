@@ -13,6 +13,7 @@ def getData(url, max_retry=5, status_retry_list=[503, 504]):
         delay = (attempts+1)*10
         if attempts != 0:
             print("Retrying ....")
+        response = None
         try:
             response = requests.get(url)
             if response.status_code in status_retry_list:
@@ -23,6 +24,7 @@ def getData(url, max_retry=5, status_retry_list=[503, 504]):
             print("*******************************************")
             print("ERROR")
             print(e)
+            print(response)
             print("*******************************************")
             time.sleep(delay)
 

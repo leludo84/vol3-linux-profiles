@@ -2,7 +2,7 @@
 
 while true
 do
-	for distrib in centos8 almalinux8 almalinux9 debian10 debian11 debian12 ubuntu16 ubuntu18 ubuntu20 ubuntu22 debian-snapshot
+	for distrib in centos8 almalinux8 almalinux9 debian10 debian11 debian12 ubuntu16 ubuntu18 ubuntu20 ubuntu22 ubuntu24 debian-snapshot
 	do
 		docker run -it --rm -v ./profiles/$distrib:/root/profiles profilator-$distrib
 		git pull
