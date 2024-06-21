@@ -33,7 +33,7 @@ This project contains all kernel versions including security updates.
 The are two methods to find your profile:
 
 1.  Use the kernel package name with version and add *-dbg*, *-dbgsym* or *-debuginfo*, depending on the linux distribution;
-2.  Use Linux banners index (*banners.json*), for example:
+2.  Use Linux banners index (*banners.ndjson*), for example:
 
 ```bash
 grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #7~22.04.1-Ubuntu SMP Fri Jul  7 13:49:28 UTC 2023 (Ubuntu 6.2.0-1007.7~22.04.1-aws 6.2.13)" banners.json | jq .symbols_file

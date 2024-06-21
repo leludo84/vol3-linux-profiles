@@ -23,6 +23,7 @@ banner = banner.split('\n')[0]
 output = {
     "symbols_file": os.path.basename(filename+".xz"),
     "banner": banner,
+    "banner_b64": data["symbols"]["linux_banner"]["constant_data"],
 }
 
 print(json.dumps(output))
