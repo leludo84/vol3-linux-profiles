@@ -48,7 +48,7 @@ grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gc
 
 Volatility can automatically download the symbols file by entering the address of an ISF server. It will download the *banners-isf.json* index directly from github where it will find the symbols file URL.
 
-Set the constant **REMOTE_ISF_URL** to *https://raw.githubusercontent.com/leludo84/vol3-linux-profiles/main/banners-isf.json* in **volatility3/framework/constants/__init__.py**.
+Set the constant **REMOTE_ISF_URL** to *https://raw.githubusercontent.com/leludo84/vol3-linux-profiles/main/banners-isf.json* in **volatility3/framework/constants/i\_\_init\_\_.py**.
 
 ## Install profiles manualy
 
