@@ -36,7 +36,7 @@ The are two methods to find your profile:
 2.  Use Linux banners index (*banners.ndjson*), for example:
 
 ```bash
-grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #7~22.04.1-Ubuntu SMP Fri Jul  7 13:49:28 UTC 2023 (Ubuntu 6.2.0-1007.7~22.04.1-aws 6.2.13)" banners.json | jq .symbols_file
+grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gcc-11 (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #7~22.04.1-Ubuntu SMP Fri Jul  7 13:49:28 UTC 2023 (Ubuntu 6.2.0-1007.7~22.04.1-aws 6.2.13)" banners.ndjson | jq .symbols_file
 
 "linux-image-unsigned-6.2.0-1007-aws-dbgsym_6.2.0-1007.7~22.04.1_x86_64.json.xz"
 
@@ -61,7 +61,8 @@ Each of these profiles is packaged as a compressed `.json.xz` file. You can enab
 All processors are docker container. Build then with this script:
 
 ```bash
-./make.sh
+cd sources
+make
 ```
 
 ### Run
