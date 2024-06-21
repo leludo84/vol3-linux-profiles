@@ -44,7 +44,13 @@ grep "Linux version 6.2.0-1007-aws (buildd@lcy02-amd64-106) (x86_64-linux-gnu-gc
 
 > Note: the banner is recovered via the volatility3 plugin **banners.Banners**.
 
-## Install profiles
+## Symbols file automatic download in Volatility3
+
+Volatility can automatically download the symbols file by entering the address of an ISF server. It will download the *banners-isf.json* index directly from github where it will find the symbols file URL.
+
+Set the constant **REMOTE_ISF_URL** to *https://raw.githubusercontent.com/leludo84/vol3-linux-profiles/main/banners-isf.json* in **volatility3/framework/constants/__init__.py**.
+
+## Install profiles manualy
 
 Each of these profiles is packaged as a compressed `.json.xz` file. You can enable them individually in your Volatility installation by copying it in `volatility3/symbols/linux/`.
 
