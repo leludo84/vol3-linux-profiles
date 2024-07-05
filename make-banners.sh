@@ -1,7 +1,9 @@
 #/bin/bash
-
-test "$1" = "" && exit 1
-
+if [ "$1" = "" ]
+then
+	echo "USAGE: $0 <profiles root directory>" >&2
+	exit 1
+fi
 
 banners_file=./banners.ndjson
 
