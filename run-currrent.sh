@@ -17,7 +17,7 @@ do
 		# Update global banners files
 		./make-banners.sh profiles/
 		./bannersToISL.py
-		git commit -m"Banners updates" banners.ndjson banners-isl.json
+		git commit -m"Banners updates" banners.ndjson banners-isf.json
 		git push
 
 	fi

@@ -9,7 +9,7 @@ isl_datas = {
         "linux": {},
 }
 
-isl_output   = open("./banners-isl.json", "w")
+isl_output   = open("./banners-isf.json", "w")
 
 with open("banners.ndjson") as  f:
     for l in f.readlines():
