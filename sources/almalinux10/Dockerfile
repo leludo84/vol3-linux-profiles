@@ -1,0 +1,10 @@
+FROM almalinux:10
+
+RUN yum install yum-utils -y
+#RUN yum-config-manager --enable baseos-debuginfo 
+ADD almalinux10/almalinux-debug.repo /etc/yum.repos.d/ 
+
+COPY ../dwarf2json ../profilator-alma.sh ../banner.py /root/
+RUN chmod +x /root/* && mkdir /root/profiles
+
+CMD cd /root && ./profilator-alma.sh

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e -x
 
-ARCH=$(uname -p)
+ARCH=$(uname -m)
 
 python=python
 test -e /usr/bin/python3 && python=python3
